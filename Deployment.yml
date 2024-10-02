@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-my-maven-app-dev  # Change this for staging/prod
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-maven-app
+  template:
+    metadata:
+      labels:
+        app: my-maven-app
+    spec:
+      containers:
+      - name: my-maven-app
+        image: my-maven-app:latest
+        ports:
+        - containerPort: 80
