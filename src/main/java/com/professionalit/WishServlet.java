@@ -3,6 +3,7 @@ package com.professionalit;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Calendar;
+import java.util.Date;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -28,14 +29,14 @@ public class WishServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+		System.out.println(new Date().getSeconds());
 		PrintWriter pw=response.getWriter();
 	      pw.println("<html>");
 	      pw.println("<marquee><h1>Welcome to FlipKart<h1></marquee>");
 	      Calendar calendar = Calendar.getInstance();
 			int hours = calendar.get(calendar.HOUR_OF_DAY);
 			if (hours < 12) {
-				pw.println("<h1>Good Morning <h1>");
+				pw.println("<h1>Good Morning <h1> " + request.getParameter("uname"));
 			} else if (hours > 12 && hours < 16) {
 				pw.println("<h1>Good After Noon <h1>");
 			} else if (hours > 16 && hours < 20) {
