@@ -33,6 +33,7 @@ public class WishServlet extends HttpServlet {
 		PrintWriter pw=response.getWriter();
 	      pw.println("<html>");
 	      pw.println("<marquee><h1>Welcome to FlipKart<h1></marquee>");
+	      pw.println("<h>Welcome Manish<h>");
 	      Calendar calendar = Calendar.getInstance();
 			int hours = calendar.get(calendar.HOUR_OF_DAY);
 			if (hours < 12) {
