@@ -38,11 +38,11 @@ public class WishServlet extends HttpServlet {
 			if (hours < 12) {
 				pw.println("<h1>Good Morning <h1> " + request.getParameter("uname"));
 			} else if (hours > 12 && hours < 16) {
-				pw.println("<h1>Good After Noon <h1>");
+				pw.println("<h1>Good After Noon <h1> " + request.getParameter("uname"));
 			} else if (hours > 16 && hours < 20) {
-				pw.println("<h1>Good Evening <h1>");
+				pw.println("<h1>Good Evening <h1> " + request.getParameter("uname")) ;
 			} else {
-				pw.println("<h1>Good Night <h1>");
+				pw.println("<h1>Good Night <h1>" + request.getParameter("uname"));
 		}
 	       pw.println("</html>");
 	      pw.close();
