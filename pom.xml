@@ -21,24 +21,14 @@
 
 	<dependencies>
 		<dependency>
-    <groupId>javax.servlet</groupId>
-    <artifactId>javax.servlet-api</artifactId>
-    <version>3.1.0</version>
-</dependency>
-
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
+			<version>6.0.0</version>
+			<scope>provided</scope>
+		</dependency>
+		
 	</dependencies>
 	<build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-war-plugin</artifactId>
-            <version>3.3.1</version>
-            <configuration>
-                <warSourceDirectory>src/main/webapp</warSourceDirectory>
-                <!-- No need to specify webXml here -->
-            </configuration>
-        </plugin>
-    </plugins>
 </build>
 
 	
