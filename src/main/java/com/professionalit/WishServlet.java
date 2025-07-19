@@ -6,7 +6,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import jakarta.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
